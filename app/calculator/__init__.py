@@ -8,6 +8,13 @@ and divide numbers based on what the user types.
 # This is like opening a toolbox and pulling out the tools we need to do our math.
 from app.operations import Operations
 
+OPERATOR_SYMBOLS = {
+    "add": "+",
+    "subtract": "-",
+    "multiply": "x",
+    "divide": "/"
+}
+
 # Now we're going to create the main function called "calculator". 
 # A function is just a block of code that does something when you call it, kind of like a recipe that tells the 
 # computer what to do.
@@ -60,7 +67,8 @@ def calculator():
             continue  # Go back to the top of the loop and try again.
 
         # Finally, we print the result of the operation (for example, "Result: 8").
-        print(f"Result: {result}")
+        symbol = OPERATOR_SYMBOLS[operation]
+        print(f"{num1} {symbol} {num2} = {result}")
 
 
 # Explanation of __init__.py:

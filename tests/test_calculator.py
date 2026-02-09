@@ -29,28 +29,28 @@ def test_addition(monkeypatch):
     """Test addition operation in REPL."""
     inputs = ["add 2 3", "exit"]
     output = run_calculator_with_input(monkeypatch, inputs)
-    assert "Result: 5.0" in output
+    assert "2.0 + 3.0 = 5.0" in output
 
 
 def test_subtraction(monkeypatch):
     """Test subtraction operation in REPL."""
     inputs = ["subtract 5 2", "exit"]
     output = run_calculator_with_input(monkeypatch, inputs)
-    assert "Result: 3.0" in output
+    assert "5.0 - 2.0 = 3.0" in output
 
 
 def test_multiplication(monkeypatch):
     """Test multiplication operation in REPL."""
     inputs = ["multiply 4 5", "exit"]
     output = run_calculator_with_input(monkeypatch, inputs)
-    assert "Result: 20.0" in output
+    assert "4.0 x 5.0 = 20.0" in output
 
 
 def test_division(monkeypatch):
     """Test division operation in REPL."""
     inputs = ["divide 10 2", "exit"]
     output = run_calculator_with_input(monkeypatch, inputs)
-    assert "Result: 5.0" in output
+    assert "10.0 / 2.0 = 5.0" in output.splitlines()
 
 
 # Negative Tests
